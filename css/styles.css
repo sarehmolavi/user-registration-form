@@ -1,0 +1,321 @@
+@font-face {
+    font-family: 'Figtree';
+    src: url('../font/Figtree-Regular.ttf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Medium */
+@font-face {
+    font-family: 'Figtree';
+    src: url('../font/Figtree-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Bold */
+@font-face {
+    font-family: 'Figtree';
+    src: url('../font/Figtree-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+  --primary: #5B6CFF;          /* main button & active tab */
+  --primary-light: #EEF0FF;
+  --text-dark: #1E1E2D;
+  --text-muted: #7A7A9D;
+  --border: #E3E5F1;
+  --error: #EF4444;
+  --success: #22C55E;
+  --bg: #F8F9FD;
+}
+
+body{
+    font-family: 'Figtree' , sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: #ffffff;
+}
+
+h1{
+    font-weight: 700;
+}
+h2{
+    font-weight: 500;
+}
+p,input,button{
+    font-weight: 400;
+}
+
+.container{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    padding: 32px;
+    margin: 0;
+    height: 100vh;
+}
+
+.left-panel {
+    position: relative;               /* برای overlay */
+    width: 500px;
+    height: 960px;
+    /*top: 32px;*/
+    /*left: 32px;*/
+    border-radius: 20px;
+    background-image: url("../assets/bg.jpg.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 48px;
+    color: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  /* top-content بالا، bottom-content پایین */
+    align-items: center;             /* وسط افقی */
+
+    max-height: 90vh;
+    overflow: hidden;
+}
+
+.left-panel::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border-radius: 20px;
+    z-index: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(70, 95, 240, 0.5) 0%,    /* بالا پررنگ‌تر */
+        rgba(70, 95, 240, 0.2) 50%,   /* وسط کم‌رنگ */
+        rgba(70, 95, 240, 0.5) 100%   /* پایین پررنگ‌تر */
+    );
+}
+
+.title {
+    position: relative;  /* روی overlay */
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* وسط افقی */
+    text-align: center;
+    gap: 12px;
+}
+
+/* ===== Bottom content (h2 + p) ===== */
+.footer-text {
+    position: relative;  /* روی overlay */
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* وسط افقی */
+    text-align: center;
+    gap: 8px;
+}
+
+.right-panel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 420px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-dark); /* یا هر رنگی که متن باید داشته باشه */
+
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.logo-icon-wrapper {
+  background-color: rgba(236, 240, 255, 1); /* بک‌گراند نیمه شفاف فقط پشت آیکون */
+  padding: 4px;           /* فاصله دور آیکون */
+  border-radius: 6px;     /* گوشه‌های گرد */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain; /* حفظ نسبت تصویر */
+}
+
+.tabs {
+  display: flex;
+  background: var(--primary-light);
+  border-radius: 10px;
+  margin-bottom: 24px;
+  margin-top: 24px;
+  padding: 4px;
+}
+
+.tabs button {
+  flex: 1;
+  padding: 10px 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--text-dark);
+}
+
+.tabs .active {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.tabs button:disabled {
+  color: var(--text-muted);
+  cursor: not-allowed;
+}
+
+/* ================= FORM ================= */
+.form-group {
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+  color: var(--text-dark);
+}
+
+.password-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.password-label a {
+  font-size: 12px;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  font-size: 14px;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+input.error {
+  border-color: var(--error);
+}
+
+input.success {
+  border-color: var(--success);
+}
+
+small.error {
+  color: var(--error);
+  font-size: 12px;
+}
+
+/* ================= PASSWORD RULES ================= */
+.password-rules {
+  margin: 12px 0 20px;
+  padding-left: 18px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.password-rules li {
+  margin-bottom: 6px;
+  position: relative;
+  padding-left: 24px;
+  list-style:none ;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.password-rules li::before{
+    content: '✔';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 14px;
+    line-height: 1;
+    color: var(--text-muted);
+    transition: color 0.3s, opacity 0.3s;
+}
+
+.password-rules li.valid{
+    color: var(--success);
+}
+
+.password-rules li.valid::before{
+    color: var(--success);
+}
+/* ================= BUTTON ================= */
+button[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  background: var(--primary);
+  border: none;
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+button[type="submit"]:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ================= TERMS ================= */
+.terms {
+  margin-top: 16px;
+  font-size: 12px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.terms strong {
+  color: var(--text-dark);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left-panel {
+    min-height: 280px;
+  }
+}
