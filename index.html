@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SimpleFlow - SignUp</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <div class="container"> <!-- LEFT SIDE (IMAGE) -->
+            <div class="left-panel">
+                <div class="title">
+                    <h1>Welcome To SimpleFlow</h1>
+                    <p class="subtitle">Your Gateway to Effortless Management.</p>
+                </div>
+
+                <div class="footer-text">
+                    <h2>Seamless Collaboration</h2>
+                    <p>Effortlessly work together with your team in real-time.</p>
+                </div>
+            </div>
+
+            <div class="right-panel">
+                <div class="form-container">
+                    <div class="logo">
+                        <div class="logo-icon-wrapper">
+                            <img src="assets/S.png" alt="SimpleFlow Icon" class="logo-icon">
+                        </div>
+                    <span>SimpleFlow</span>
+                    </div>
+                    
+
+                    <div class="tabs">
+                        <button class="active">Sign Up</button>
+                        <button disabled>Sign In</button>
+                    </div>
+
+                    <form id="registerForm">
+                        <div class="form-group">
+                            <label>Username</label>
+                            <input type="text" id="username" placeholder="Pick a Username">
+                            <small class="error"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" id="fullname" placeholder="Enter Your Name">
+                            <small class="error"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" id="email" placeholder="Enter Your Email Address">
+                            <small class="error"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="password-label">
+                                <label for="password">Password</label>
+                                <a href="#" class="Forgot-password">Forgot Password?</a>
+                            </div>
+                            <input type="password" id="password" placeholder="Enter Password">
+                            <small class="error"></small>
+
+                            <ul class="password-rules">
+                                <li id="rule-length">At least 8 characters</li>
+                                <li id="rule-number">Contains a number or symbol</li>
+                                <li id="rule-name-email">Cannot contain your name or email address</li>
+                            </ul>
+                        </div>
+                            <button type="submit" disabled>Create Account</button>
+                    </form>
+                    <p class="terms">
+                        By signing up, you accept our <strong>Terms of use</strong> & <strong>Privacy Policy</strong>.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        </div>  <script src="js/script.js"></script></body>
+    </body>
+    
+</html>
