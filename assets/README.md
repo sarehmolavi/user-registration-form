@@ -61,16 +61,16 @@ On smaller screens, elements stack vertically to ensure readability and usabilit
 ## 📸 Screenshots
 
 ### Default State
-![Default Form](assets/Screenshots/Default.JPG)
+![Default Form](Screenshots/Default.jpg)
 
 ### Validation Error State
-![Error State](assets/screenshots/Eror.JPG)
+![Error State](screenshots/Eror.JPG)
 
 ### Successful Validation
-![Success State](assets/screenshots/Success.JPG)
+![Success State](screenshots/Success.JPG)
 
 ### After Form Submission
-![After Submit](assets/screenshots/After-Submit.JPG)
+![After Submit](screenshots/After-Submit.JPG)
 
 ---
 
