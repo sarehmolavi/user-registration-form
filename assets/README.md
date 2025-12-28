@@ -1,5 +1,3 @@
-<img width="1831" height="895" alt="Default" src="https://github.com/user-attachments/assets/7fd3c24a-65e6-468b-97c1-cde30b7994e8" /># User Registration Form
-
 A responsive user registration form built with pure HTML, CSS, and Vanilla JavaScript, featuring real-time validation and user-friendly feedback.
 
 This project was developed as a web development task with strict design and validation requirements.
