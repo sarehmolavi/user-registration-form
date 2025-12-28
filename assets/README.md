@@ -1,4 +1,4 @@
-# User Registration Form
+<img width="1831" height="895" alt="Default" src="https://github.com/user-attachments/assets/7fd3c24a-65e6-468b-97c1-cde30b7994e8" /># User Registration Form
 
 A responsive user registration form built with pure HTML, CSS, and Vanilla JavaScript, featuring real-time validation and user-friendly feedback.
 
@@ -61,16 +61,16 @@ On smaller screens, elements stack vertically to ensure readability and usabilit
 ## 📸 Screenshots
 
 ### Default State
-![Default Form](Screenshots/Default.jpg)
+![Default Form](screenshots/Default.jpg)
 
 ### Validation Error State
-![Error State](screenshots/Eror.JPG)
+![Error State](screenshots/Eror.jpg)
 
 ### Successful Validation
-![Success State](screenshots/Success.JPG)
+![Success State](screenshots/Success.jpg)
 
 ### After Form Submission
-![After Submit](screenshots/After-Submit.JPG)
+![After Submit](screenshots/After-Submit.jpg)
 
 ---
 
